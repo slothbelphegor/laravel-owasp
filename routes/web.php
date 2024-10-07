@@ -21,3 +21,6 @@ Route::get('/vulnerabilities/csrf', function () {
 Route::post('/vulnerabilities/csrf', [VulnerabilityController::class, 'csrf'])->name('csrf.submit');
 Route::get('/vulnerabilities/idor', [VulnerabilityController::class, 'idor'])->name('idor');
 Route::post('/vulnerabilities/rce', [VulnerabilityController::class, 'rce'])->name('rce');
+Route::get('/vulnerabilities/rce', function () {
+    return view('vulnerabilities.rce');
+})->name('rce.form');
