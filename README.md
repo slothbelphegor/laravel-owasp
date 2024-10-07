@@ -36,5 +36,9 @@ Create a HTML file with this as content:
 Open this HTML file, submit the form and you will be redirected to http://127.0.0.1:8000/vulnerabilities/csrf with the information inputted from the form, which means the hacker has successfully created his own user from a form outside the server.
 Inside csrf.blade.php, add the tag `@csrf` inside the form shall fix the risk.
 
+## 4. RCE
+This route consists of a form that allows you to execute raw PHP code (due to the usage of eval() method inside the controller). The most straightforward way to abuse this vulnerability is type `phpinfo();` into the field and submit. Then you will see all info about the server, the environment, and more. Fixing this require the removal of the eval() method.
+
+
 
 
