@@ -10,7 +10,7 @@ Open app\Http\Controllers\VulnerabilityController.php, inside the sqlInjection()
 Then type in something like "0 OR 1=1" into the field. You will see all of the usernames inside the table.
 
 ## 2.XSS
-Open app\Http\Controllers\VulnerabilityController.php, inside the xss() function, you will see a name is stored in the session.
+Open app\Http\Controllers\VulnerabilityController.php, inside the xss() function, you will see a name is stored in the session, which makes it vulnerable. Inside xss.blade.php you can also see that te view is vulnerable too.
 
-Then type in something like "0 OR 1=1" into the field. You will see all of the usernames inside the table.
+At route http://127.0.0.1:8000/vulnerabilities/xss, type something like <script>alert('XSS');</script> into the field and it will work.
 
