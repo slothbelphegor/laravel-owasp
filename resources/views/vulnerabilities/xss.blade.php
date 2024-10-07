@@ -1,7 +1,7 @@
 <h2>XSS Vulnerability</h2>
 <form action="{{ route('xss.submit') }}" method="POST">
     @csrf
-    <input type="text" name="name" placeholder="Enter Name">
+    <input type="text" name="name" placeholder="Enter the script code to attack">
     <button type="submit">Submit</button>
 </form>
 

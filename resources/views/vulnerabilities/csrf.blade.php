@@ -1,6 +1,6 @@
 <h2>CSRF Vulnerability Demonstration</h2>
 <form action="{{ route('csrf.submit') }}" method="POST">
-    @csrf
+    {{-- @csrf --}}
     <input type="text" name="name" placeholder="Enter Name">
     <button type="submit">Create User</button>
 </form>
